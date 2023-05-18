@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: rgb(180, 177, 177); /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 100, 146); /* color of the scroll thumb */
+  border-radius: 2px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(0, 97, 145); /* creates padding around scroll thumb */
+}
+
+@layer components {
+  .btn-calc {
+    @apply grid w-20 h-20 text-2xl font-bold text-gray-900 bg-white rounded-md cursor-pointer place-items-center active:scale-95 dark:bg-gray-800 dark:text-gray-300;
+  }
+}
+
+
+body{
+  padding: 30px;
+}
+
+
+.switch-btn {
+  width: 58px;
+  height: 20px;
+  border-radius: 12px;
+  border: 17px solid;
+  background: linear-gradient(90deg, #A430FF 0%, #F318AD 49.74%, #FF2171 100%);
+  z-index: 0;
+  margin: 10px 10px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 400ms;
+}
+
+.switch-btn::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 18px;
+  background: #fff;
+  top: 2px;
+  left: 4px;
+  transition-duration: 400ms;
+  position: absolute;
+  z-index: 1;
+}
+
+.switch-on::after {
+  left: 40px;
+  background: #171C22;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tailwind CSS</title>
+  </head>
+  <body
+    class="text-gray-800 dark:text-gray-50 bg-slate-400 dark:bg-slate-500 grid place-items-center"
+  >
+    <div class="container grid place-items-center">
+      <div class="calculator w-[414px] bg-gray-200 dark:bg-gray-900 rounded-lg">
+        <div
+          class="text-sm text-gray-500 header-calc p-2 select-none cursor-pointer hover:opacity-90 switch-btn switch-on"
+          id="switch-theme"
+        ></div>
+        <div class="display-calc p-7">
+          <div class="input_wrapper">
+            <input
+              type="text"
+              value=""
+              disabled
+              class="w-full mb-3 text-4xl font-semibold text-gray-500 bg-transparent focus:outline-none text-end input-scoreboard"
+            />
+          </div>
+          <div class="result_wrapper">
+            <input
+              type="text"
+              value="0"
+              disabled
+              class="w-full bg-transparent font-semibold focus:outline-none text-end text-gray-800 text-[64px] dark:text-gray-300 input-result"
+            />
+          </div>
+        </div>
+        <div
+          class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[10px]"
+        ></div>
+        <!-- !main_panel -->
+        <div
+          class="p-5 main_panel bg-violet-300 rounded-b-lg dark:bg-gray-700 select-none"
+        >
+          <!-- !contol_panel -->
+          <div class="flex items-center justify-between contol_panel">
+            <div class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 cursor-pointer stroke-violet-500 mr-7 active:scale-95"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 cursor-pointer stroke-violet-500 active:scale-95"
+              >
+                <path
+                  d="M3.75 20.25V15.75M3.75 20.25H8.25M3.75 20.25L9 15M20.25 3.75H15.75M20.25 3.75V8.25M20.25 3.75L15 9"
+                  stroke="stroke-violet-500"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="px-4 border-2 rounded-full cursor-pointer border-violet-500 text-violet-500 active:scale-95 mr-7"
+              >
+                1080
+              </button>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 cursor-pointer stroke-violet-500 active:scale-95 back_button"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- !number_panel -->
+          <div
+            class="grid grid-cols-4 gap-4 pt-4 number_panel place-items-center"
+          >
+            <div
+              class="btn-calc clean bg-gray-200 dark:bg-gray-600"
+              data-key="C"
+            >
+              C
+            </div>
+            <div
+              class="btn-calc brackets bg-gray-200 dark:bg-gray-600"
+              data-key="()"
+            >
+              ()
+            </div>
+            <div
+              class="btn-calc pеrcent bg-gray-200 dark:bg-gray-600"
+              data-key="%"
+            >
+              %
+            </div>
+            <div
+              class="btn-calc division bg-violet-600 dark:bg-violet-700"
+              data-key="/"
+            >
+              /
+            </div>
+            <div class="btn-calc number-7" data-key="7">7</div>
+            <div class="btn-calc number-8" data-key="8">8</div>
+            <div class="btn-calc number-9" data-key="9">9</div>
+            <div
+              class="btn-calc multiplication bg-violet-600 dark:bg-violet-700"
+              data-key="x"
+            >
+              x
+            </div>
+            <div class="btn-calc number-4" data-key="4">4</div>
+            <div class="btn-calc number-5" data-key="5">5</div>
+            <div class="btn-calc number-6" data-key="6">6</div>
+            <div
+              class="btn-calc minus bg-violet-600 dark:bg-violet-700"
+              data-key="-"
+            >
+              -
+            </div>
+            <div class="btn-calc number-1" data-key="1">1</div>
+            <div class="btn-calc number-2" data-key="2">2</div>
+            <div class="btn-calc number-3" data-key="3">3</div>
+            <div
+              class="btn-calc plus bg-violet-600 dark:bg-violet-700"
+              data-key="+"
+            >
+              +
+            </div>
+            <div class="btn-calc plus_minus" data-key="+/-">+/-</div>
+            <div class="btn-calc number-0" data-key="0">0</div>
+            <div class="btn-calc point" data-key=".">.</div>
+            <div
+              class="btn-calc equals bg-gradient-to-r from-purple-500 to-pink-500"
+              data-key="="
+            >
+              =
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
